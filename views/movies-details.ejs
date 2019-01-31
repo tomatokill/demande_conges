@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Express Movies</title>
+    <link rel="stylesheet" href="../public/styles.css"/>    
+</head>
+<body>
+    <div class="central">        
+        <% include ./partials/header %>    
+        <h1>Détails du film <%= movietitle %></h1>
+        <div>
+            <%= movieid %>
+        </div>
+    </div>
+    <% include ./partials/footer %>
+</body>
