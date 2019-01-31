@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const multer=require('multer');
 const upload = multer();
 
-let frenchMovies = [];
+// let employes = [];
 
 app.use('/public',express.static('public'));
 
@@ -13,17 +13,16 @@ app.use('/public',express.static('public'));
 app.set('views','./views');
 app.set('view engine','ejs');
 
-app.get('/movies',function(req,res)
+app.get('/ddc-form',function(req,res)
 {
-    const title = "Films français des 30dernières années";
-
-    frenchMovies = [
-        {title: "Le fabuleux destin d'Amélie Poulain", year: 2001},
-        {title: "Buffet fro", year: 1979},
-        {title: "Le diner de cons", year: 1998},
-        {title: "sdf sdfsdf", year: 2012}
-    ]
-    res.render('movies', {titleMovie:title, frenchMovies: frenchMovies});
+    // employes = [
+    //     {title: "Le fabuleux destin d'Amélie Poulain", year: 2001},
+    //     {title: "Buffet fro", year: 1979},
+    //     {title: "Le diner de cons", year: 1998},
+    //     {title: "sdf sdfsdf", year: 2012}
+    // ]
+    // res.render('ddc-form', {titleMovie:title, frenchMovies: frenchMovies});
+    res.render('ddc-form');
 })
 
 var urlencodedParser = bodyParser.urlencoded({extended:false});
